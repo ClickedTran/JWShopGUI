@@ -1,0 +1,13 @@
+pyproject.toml
+src/endstone_shopgui.egg-info/PKG-INFO
+src/endstone_shopgui.egg-info/SOURCES.txt
+src/endstone_shopgui.egg-info/dependency_links.txt
+src/endstone_shopgui.egg-info/entry_points.txt
+src/endstone_shopgui.egg-info/top_level.txt
+src/shopgui/__init__.py
+src/shopgui/listener.py
+src/shopgui/main.py
+src/shopgui/manager/__init__.py
+src/shopgui/manager/shop_manager.py
+src/shopgui/menu/__init__.py
+src/shopgui/menu/shop_menu.py
