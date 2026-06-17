@@ -1,7 +1,7 @@
 ## Generator
-ShopGUI plugin for EndStone software, adapted from ShopGUI in PocketMine-MP software.
-Both are owned by ClickedTran (ClickedTran_VN).
-
+- ShopGUI plugin for EndStone software, adapted from ShopGUI in PocketMine-MP software.
+- Both are owned by ClickedTran (ClickedTran_VN).
+- The default language is `Vietnamese`, please translate into the language you prefer.
 ## Install
 - Step 1: Download and unzip file
 - Step 2: Run Command Propmt or Power Shell as Administrator
