@@ -1,2 +1,0 @@
-[endstone]
-shopgui = shopgui.main:ShopGUI
