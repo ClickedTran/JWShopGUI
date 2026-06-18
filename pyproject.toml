@@ -5,7 +5,7 @@ description = "Shop plugin for Endstone Software"
 authors = [
     {name = "ClickedTran", email = "clickedwp@gmail.com"},
 ]
-
+dependencies = ["endstone>=0.11.3"]
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
