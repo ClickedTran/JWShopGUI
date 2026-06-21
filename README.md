@@ -2,6 +2,7 @@
 - ShopGUI plugin for EndStone software, adapted from ShopGUI in PocketMine-MP software.
 
 ## Command and Permission:
+| **Commands** | **Description** | **Permission** | **default**|
 | --- | --- | --- | --- |
 | `shopgui` | `Open Menu Shop` | `shopgui.command` | `true` |
 
