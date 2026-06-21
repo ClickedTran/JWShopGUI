@@ -24,7 +24,7 @@ venv\Scripts\activate
 ```
 - Step 5: Go to file path
 ```python
-cd eShopGUI-Master
+cd JWShopGUI-Master
 ```
 - Step 6: Run command and wait:
 ```python
