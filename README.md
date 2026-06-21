@@ -1,7 +1,18 @@
 ## Generator
 - ShopGUI plugin for EndStone software, adapted from ShopGUI in PocketMine-MP software.
-- Both are owned by ClickedTran (ClickedTran_VN).
+
+## Command and Permission:
+| --- | --- | --- | --- |
+| `shopgui` | `Open Menu Shop` | `shopgui.command` | `true` |
+
+## Language:
+- With its diverse and intelligent language system, you can customize it to your preferences without causing errors to plugins (or if it does).
 - The default language is `Vietnamese`, please translate into the language you prefer.
+
+## Plugin Depends
+- [JWInventoryAPI](https://github.com/junggamyeon/JWInventoryAPI)
+- [JWEconomy](https://github.com/junggamyeon/JWEconomy)
+
 ## Install
 - Step 1: Download and unzip file
 - Step 2: Download [JWEconomy](https://github.com/junggamyeon/JWEconomy) and [JWInventoryAPI](https://github.com/junggamyeon/JWInventoryAPI)
