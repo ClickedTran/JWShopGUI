@@ -12,7 +12,7 @@ venv\Scripts\activate
 ```
 - Step 5: Go to file path
 ```python
-cd ShopGUI_Endstone
+cd JWShopGUI-Master
 ```
 - Step 6: Run command and wait:
 ```python
