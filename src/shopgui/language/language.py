@@ -20,110 +20,108 @@ class LanguageManager:
     def base_language(self) -> dict:
         return {
             "version": 1,
-            "plugin_info":{
-                "reload_language": "§aĐã tải lại ngôn ngữ: %1",
-                "message_not_found": "§cKhông tìm thấy tin nhắn: %1",
-                "economy_not_found": "Không tìm thấy plugin JWEconomy! Hãy đảm bảo rằng JWEconomy đã được cài đặt và kích hoạt.",
-                "no_permission": "Bạn không có quyền để sử dụng lệnh này!",
-                "use_ingame": "Lệnh này chỉ có thể được sử dụng bởi người chơi!",
-                "update_item": {
-                    "success": "§aĐã cập nhật dữ liệu cấu hình từ file shops.json vào RAM thành công!",
-                    "error": "Lỗi khi đọc file cấu hình để reload: %1"
+            "plugin_info": {
+              "reload_language": "§aSuccessfully reloaded language: %1",
+              "message_not_found": "§cMessage not found: %1",
+              "economy_not_found": "JWEconomy plugin not found! Please ensure JWEconomy is installed and enabled.",
+              "no_permission": "You do not have permission to use this command!",
+              "use_ingame": "This command can only be used by players!",
+              "update_item": {
+                "success": "§aSuccessfully updated config data from shops.json to RAM!",
+                "error": "Error reading config file to reload: %1"
+              },
+              "shop_data_not_found": "Could not find configuration for shop named: %1",
+              "command": {
+                "create": {
+                  "success": "Shop %1 has been successfully created!",
+                  "usage": "Usage: /shop create <shop_name> <slot> <icon>, where <slot> must be an integer",
+                  "error_1": "You must hold an item to use as the shop icon or provide the item name in the command!",
+                  "error_2": "Shop already exists!"
                 },
-                "sho_data_not_found": "Không tìm thấy cấu hình cho shop có tên: %1!",
-                "command": {
-                    "create": {
-                        "success": "Cửa hàng %1 đã được tạo thành công!",
-                        "usage": "Sử dụng: /shop create <tên cửa hàng> <slot> <icon>, trong đó <slot> phải là số nguyên",
-                        "error_1": "Bạn phải cầm một món đồ làm biểu tượng cho cửa hàng hoặc cung cấp tên món đồ trong lệnh!",
-                        "error_2": "Cửa hàng đã tồn tại!"
-                    },
-                    "remove": {
-                        "success": "Cửa hàng %1 đã được xóa thành công!",
-                        "usage": "Sử dụng: /shop remove <tên cửa hàng>",
-                        "error_1": "Cửa hàng không tồn tại!"
-                    },
-                    "setup": {
-                        "usage": "Sử dụng: /shop setup <tên cửa hàng>",        
-                        "error": "Cửa hàng không tồn tại!",
-                        "join_title": "§6>> Bạn đã vào chế độ chỉnh sửa của cửa hàng %1 <<",
-                        "join_help": [
-                            "§l§7help§r§7 - Hiển thị các lệnh có sẵn",
-                            "§l§7done§r§7 - Lưu và thoát chế độ chỉnh sửa"
-                        ],
-                        "help": [
-                            "§6>> Tất cả các lệnh chỉnh sửa <<",
-                            "§l§7help§r§7 - Hiển thị các lệnh có sẵn",
-                            "§l§7add <item_name> <buy_price> <sell_price>§r§7 - Thêm một mặt hàng vào cửa hàng với giá mua và bán đã chỉ định",
-                            "§l§7remove <item_name | slot>§r§7 - Xóa một vật phẩm khỏi cửa hàng",
-                            "§l§7done§r§7 - Lưu và thoát chế độ chỉnh sửa"
-                        ],
-                        "add": {
-                            "success": "§aVật phẩm %1 đã được thêm vào cửa hàng %2 với giá mua: %3 và giá bán %4",
-                            "error": "§cGiá mua và giá bán phải là số"
-                        },
-                        "remove": {
-                            "success_1": "§aVật phẩm tại ô %1 đã bị loại bỏ!",
-                            "success_2": "§aVật phẩm tên %1 đã bị loại bỏ!",
-                            "error_1": "§cKhông tìm thấy vật phẩm tại ô %1!",
-                            "error_2": "§cKhông tìm thấy vật phẩm với tên %1!"
-                        },
-                        "done": "§6Bạn đã thoát khỏi chế độ chỉnh sửa của cửa hàng §a%1"
-                    }
+                "remove": {
+                  "success": "Shop %1 has been successfully removed!",
+                  "usage": "Usage: /shop remove <shop_name>",
+                  "error_1": "Shop does not exist!"
+                },
+                "setup": {
+                  "usage": "Usage: /shop setup <shop_name>",
+                  "error": "Shop does not exist!",
+                  "join_title": "§6>> You have entered edit mode for shop %1 <<",
+                  "join_help": [
+                    "§1§7help§r§7 - Display available commands",
+                    "§1§7done§r§7 - Save and exit edit mode"
+                  ],
+                  "help": [
+                    "§6>> All edit commands <<",
+                    "§1§7help§r§7 - Display available commands",
+                    "§1§7add <item_name> <buy_price> <sell_price>§r§7 - Add an item to the shop with buy and sell prices",
+                    "§1§7remove <item_name | slot>§r§7 - Remove an item from the shop",
+                    "§1§7done§r§7 - Save and exit edit mode"
+                  ],
+                  "add": {
+                    "success": "§aItem %1 has been added to shop %2 with buy price %3 and sell price %4",
+                    "error": "§cBuy price and sell price must be numbers"
+                  },
+                  "remove": {
+                    "success_1": "§aItem at slot %1 has been removed!",
+                    "success_2": "§aItem named %1 has been removed!",
+                    "error_1": "§cCould not find item at slot %1!",
+                    "error_2": "§cCould not find item named %1!"
+                  },
+                  "done": "§6You have exited edit mode for shop §a%1"
                 }
-            },
-            "prefix": "§l§e[ShopGUI] §r",
-            "player_money": "§aSố tiền hiện có: %1 xu",
-            "menu": {
+              },
+              "prefix": "§l§e[ShopGUI] §r",
+              "player_money": "§aCurrent balance: %1 xu",
+              "menu": {
                 "name": "ShopGUI - MENU",
                 "category": {
-                    "name": "CỬA HÀNG %1 - Trang %2/%3",
-                    "lore": {
-                        "buy": "§e➼ §l§6MUA:§o§7 $%1",
-                        "sell": "§e➼ §l§6BÁN:§o§7 $%1",
-                        "open": "BẤM ĐỂ MỞ CỬA HÀNG"
-                    },
-                    "stack": {
-                        "name": "Mua | Bán số lượng nhiều",
-                        "barrier": "§l§b<-- MUA | BÁN -->",
-                        "buy": "Mua x%1 Stack",
-                        "sell": "Bán x%1 Stack"
-                    },
-                    "not_found": "Ở slot này không có cửa hàng nào!",
-                    "open": "ẤN VÀO ĐỂ MỞ CỬA HÀNG"
+                  "name": "SHOP %1 - Page %2/%3",
+                  "lore": {
+                    "buy": "§q•• §1§6BUY:§o§7 %1",
+                    "sell": "§w•• §1§6SELL:§o§7 %1",
+                    "open": "§bCLICK TO OPEN SHOP"
+                  }
                 },
-                "confirm": {
-                    "name": "XÁC NHẬN GIAO DỊCH",
-                    "add_count": "THÊM",
-                    "reduce_count": "BỚT",
-                    "buy_item": "§l§aXác Nhận Mua",
-                    "sell_item": "§l§aXác Nhận Bán",
-                    "custom": "§l§cMua Bán Số Lượng Nhiều"
+                "stack": {
+                  "name": "Bulk Buy | Sell",
+                  "barrier": "§1§b<-- BUY | SELL -->",
+                  "buy": "Buy x%1 Stack",
+                  "sell": "Sell x%1 Stack"
                 },
-
-                "page": {
-                    "next": "Trang Trước",
-                    "previous": "Trang Sau",
-                    "back_to_shop": "Trở về danh sách cửa hàng"
-                }
-            },
-            "errors": {
-                "no_room": "§cKhông đủ chỗ trong hành trang để mua món đồ này!",
-                "no_money": "§cBạn không đủ %1 xu để mua vật phẩm này!",
-                "no_items_to_sell": "§cBạn không có đủ số lượng món đồ này trong hành trang để bán!",
-                "price_is_none": "Không thể xác định giá tiền của vật phẩm này!"
-            },
-            "success": {
-                "buy": "§aBạn đã mua thành công %1x %2 với giá %3 xu!",
-                "sell": "§aBạn đã bán thành công %1x %2 với giá %3 xu!",
-                "balance": "Số dư hiện tại của bạn: %1 xu"
-            },
-            "button": {
-                "buy_item": "MUA",
-                "buy_stack": "Mua x",
-
-                "sell_item": "BÁN",
-                "sell_stack": "Bán x"
+                "not_found": "There is no shop in this slot!",
+                "open": "CLICK TO OPEN SHOP"
+              },
+              "confirm": {
+                "name": "CONFIRM TRANSACTION",
+                "add_count": "ADD",
+                "reduce_count": "REMOVE",
+                "buy_item": "§l§aConfirm Purchase",
+                "sell_item": "§l§aConfirm Sale",
+                "custom": "§l§cBulk Buy/Sell"
+              },
+              "page": {
+                "next": "Next Page",
+                "previous": "Previous Page",
+                "back_to_shop": "Back to shop list"
+              },
+              "errors": {
+                "no_room": "§cNot enough space in inventory to buy this item!",
+                "no_money": "§cYou do not have enough %1 xu to buy this item!",
+                "no_items_to_sell": "§cYou do not have enough of this item in your inventory to sell!",
+                "price_is_none": "Cannot determine the price of this item!"
+              },
+              "success": {
+                "buy": "§aYou have successfully bought %1x %2 for %3 xu!",
+                "sell": "§aYou have successfully sold %1x %2 for %3 xu!",
+                "balance": "Your current balance: %1 xu"
+              },
+              "button": {
+                "buy_item": "BUY",
+                "buy_stack": "Buy x",
+                "sell_item": "SELL",
+                "sell_stack": "Sell x"
+              }
             }
         }
 
