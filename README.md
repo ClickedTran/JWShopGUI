@@ -1,5 +1,10 @@
 ## Generator
 - ShopGUI plugin for EndStone software, adapted from ShopGUI in PocketMine-MP software.
+## Featured
+- [x] Add/remove item/category in game
+- [x] Multi page
+- [x] Simple changed language
+- [x] Buy/sell digital items in large quantities (x1, x2, x3, ... Stack)
 
 ## Command and Permission:
 | **Commands** | **Description** | **Permission** | **default**|
@@ -8,7 +13,7 @@
 
 ## Language:
 - With its diverse and intelligent language system, you can customize it to your preferences without causing errors to plugins (or if it does).
-- The default language is `Vietnamese`, please translate into the language you prefer.
+- The default language is `English`, please translate into the language you prefer.
 
 ## Plugin Depends
 - [JWInventoryAPI](https://github.com/junggamyeon/JWInventoryAPI)
