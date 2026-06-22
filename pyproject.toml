@@ -1,6 +1,6 @@
 [project]
 name = "endstone-shopgui"
-version = "0.1.1"
+version = "0.1.2"
 description = "Shop plugin for Endstone Software"
 authors = [
     {name = "ClickedTran", email = "clickedwp@gmail.com"},
