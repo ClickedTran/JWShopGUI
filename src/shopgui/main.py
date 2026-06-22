@@ -87,10 +87,10 @@ class ShopGUI(Plugin):
                         shop_name = args[1]
                         icon = str(item.type)
                         slot = args[2]
-                        if self.shop_manager.exists(shop_name):
+                        if self.get_shop_manager.exists(shop_name):
                             sender.send_error_message(LanguageManager.get_translate("plugin_info.command.create.error_2"))
                         else:
-                            self.shop_manager.create(shop_name, icon, slot)
+                            self.get_shop_manager.create(shop_name, icon, slot)
                             sender.send_message(LanguageManager.get_translate("plugin_info.command.create.success", [shop_name]))
                     
                     if args[0] == "remove":
@@ -103,10 +103,10 @@ class ShopGUI(Plugin):
                             return True
                         
                         shop_name = args[1]
-                        if not self.shop_manager.exists(shop_name):
+                        if not self.get_shop_manager.exists(shop_name):
                             sender.send_error_message(LanguageManager.get_translate("plugin_info.command.remove.error_1"))
                         else:
-                            self.shop_manager.remove(shop_name)
+                            self.get_shop_manager.remove(shop_name)
                             sender.send_message(LanguageManager.get_translate("plugin_info.command.remove.success", [shop_name]))
                     
                     if args[0] == "setup":
