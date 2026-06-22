@@ -17,7 +17,7 @@ class ShopGUI(Plugin):
     prefix = "ShopGUI"
     commands = {
         "shopgui": {
-            "description": "Mở menu cửa hàng",
+            "description": "Open ShopGUI Menu",
             "usages": [
                 "/shopgui",
                 "/shopgui create <category: string> <slot: int>",    
@@ -30,14 +30,14 @@ class ShopGUI(Plugin):
     }
 
     permissions = {
-        "shopgui.command": {"description": "Cho phép sử dụng lệnh shopgui", "default": "true"},
-        "shopgui.command.create": {"description": "Cho phép tạo cửa hàng mới", "default": "op"},
-        "shopgui.command.remove": {"description": "Cho phép xóa cửa hàng", "default": "op"},
-        "shopgui.command.setup": {"description": "Cho phép cài đặt cửa hàng", "default": "op"}
+        "shopgui.command": {"description": "Allow player use command", "default": "true"},
+        "shopgui.command.create": {"description": "Allow player create shop", "default": "op"},
+        "shopgui.command.remove": {"description": "Allow player remove shop", "default": "op"},
+        "shopgui.command.setup": {"description": "Allow player setup shop", "default": "op"}
     }
 
     def on_enable(self) -> None:
-        self.logger.info("ShopGUI đang được kích hoạt!")
+        self.logger.info("ShopGUI has enable!")
         self.language = LanguageManager(self)
         self.economy = self.server.plugin_manager.get_plugin("jweconomy")
         self.register_events(EventListener(self))
